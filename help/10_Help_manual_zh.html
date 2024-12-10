@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>GraphPythonMag 帮助文档</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="title-header">
+<div id="title-text">
+    <img
+        id="title-image"
+        src="images/edgetech-logo.png"
+        alt="EdgeTech logo"/>
+    GraphPythonMag 帮助
+</div>
+</header>
+
+
+<ul>
+    <li><a href="#topic-About">关于</a></li>
+    <li><a href="#topic-Interface">程序界面</a></li>
+    <li><a href="#topic-Graphs">图表</a></li>
+    <li><a href="#topic-Histo">直方图</a></li>
+    <li><a href="#topic-Matplotlib">Matplotlib 窗口操作</a></li>
+    <li><a href="#topic-3D">3D 曲面</a></li>
+    <li><a href="#topic-SurfaceWindow">3D 曲面窗口操作</a></li>
+    <li><a href="#topic-OasisMontaj">与 OasisMontaj 集成</a></li>
+    <li><a href="#topic-Autor">反馈</a></li>
+</ul>
+
+
+<header id="topic-About">
+<div class="heading">
+关于
+</div>
+</header>
+<section>
+这是一个用于显示各种地球物理数据的应用程序。
+它支持生成图表、直方图和 3D 曲面，并具有印刷品质的输出。
+输入数据可以是任何以 CSV 格式保存的表格形式的数字数据。
+</section>
+
+<header id="topic-Interface">
+<div class="heading">
+程序界面
+</div>
+</header>
+<section>
+<ul>
+    <li>点击“打开”按钮以找到并打开源 CSV 文件。</li>
+</ul>
+<img
+    class="demo"
+    src="images/01_Open_File.gif"
+    alt="打开文件"
+    height="415px"/>
+<ul>
+    <li>使用下拉菜单选择相应的数据。</li>
+</ul>
+<img
+    class="demo"
+    src="images/02_Combobox.gif"
+    alt="选择数据"
+    height="415px"/>
+<ul>
+    <li>要清除数据，请单击“清除”按钮。</li>
+</ul>
+<img
+    class="demo"
+    src="images/03_Clear.gif"
+    alt="清除数据"
+    height="415px"/>
+<ul>
+    <li>要生成图表，请单击“显示”按钮。</li>
+</ul>
+<img
+    class="demo"
+    src="images/04_Show.gif"
+    alt="显示图表"
+    height="415px"/>
+<ul>
+    <li>要更改界面语言，请在“语言选择”下拉菜单中选择一种可用语言。</li>
+</ul>
+<img
+    class="demo"
+    src="images/05_SwitchLanguage.gif"
+    alt="选择语言"
+    height="415px"/>
+<ul>
+    <li>有疑问时，您可以点击“帮助”按钮寻求帮助。</li>
+</ul>
+<img
+    class="demo"
+    src="images/06_ShowHelp.gif"
+    alt="调用帮助"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Graphs">
+<div class="heading">
+图表
+</div>
+</header>
+<section>
+使用科学绘图库 Matplotlib 进行简单图表的生成。
+以下是程序中实现的图表类型：
+<ul>
+    <li>简单图表。要生成简单图表，请选择两个列中的任何一个的值："设备1读数" 或 "设备2读数"。</li>
+</ul>
+<img
+    class="demo"
+    src="images/07_EasyGraph.gif"
+    alt="简单图表"
+    height="415px"/>
+<ul>
+    <li>组合图表。要比较两个设备的读数，请选择两个列中的值："设备1读数" 和 "设备2读数"。</li>
+</ul>
+<img
+    class="demo"
+    src="images/08_DoubleGraph.gif"
+    alt="组合图表"
+    height="415px"/>
+<ul>
+    <li>距离相关图表。您还可以根据距离组合不同的图表类型。要实现这一点，请从“距离”下拉菜单中选择距离通道的值。</li>
+</ul>
+<img
+    class="demo"
+    src="images/09_DistGraphs.gif"
+    alt="距离相关图表"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Histo">
+<div class="heading">
+直方图
+</div>
+</header>
+<section>
+使用 Matplotlib 的扩展 Seaborn 来生成正态分布直方图。
+以下是程序中实现的正态分布直方图类型：
+<ul>
+    <li>简单直方图，与正态分布图形合并。要生成，请选择两个列中的任何一个的值："设备1读数" 或 "设备2读数"。</li>
+</ul>
+<img
+    class="demo"
+    src="images/10_Histo.gif"
+    alt="简单直方图"
+    height="415px"/>
+<ul>
+    <li>组合直方图。要比较读数，请选择两个列中的值："设备1读数" 和 "设备2读数"。</li>
+</ul>
+<img
+    class="demo"
+    src="images/11_DoubleHisto.gif"
+    alt="组合直方图"
+    height="415px"/>
+<ul>
+    <li>距离相关值分布。您还可以根据距离组合不同的显示选项。要实现这一点，请从“距离”下拉菜单中选择距离通道的值。</li>
+</ul>
+<img
+    class="demo"
+    src="images/12_DistortioanHisto.gif"
+    alt="距离相关值分布"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Matplotlib">
+<div class="heading">
+Matplotlib 窗口操作
+</div>
+</header>
+<section>
+科学图形显示窗口 - Matplotlib 允许用户执行各种操作，例如：
+<ul>
+    <li>拖动图表；</li>
+    <li>缩放；</li>
+    <li>显示构建区域；</li>
+    <li>更改轴标签；</li>
+    <li>更改颜色；</li>
+    <li>以所选格式保存图表等。</li>
+</ul>
+<img
+    class="demo"
+    src="images/13_Matplotlib.gif"
+    alt="Matplotlib 窗口操作"
+    height="415px"/>
+
+</section>
+
+<header id="topic-3D">
+<div class="heading">
+3D 曲面
+</div>
+</header>
+<section>
+使用 Plotly 库生成 3D 曲面。
+要生成曲面，请选择所有 3 列：X、Y 和 Z。!!!所有坐标必须在直角坐标系中!!!
+<img
+    class="demo"
+    src="images/14_3D.gif"
+    alt="3D 曲面"
+    height="415px"/>
+
+</section>
+
+<header id="topic-SurfaceWindow">
+<div class="heading">
+3D 曲面窗口操作
+</div>
+</header>
+<section>
+3D 曲面显示窗口允许用户执行各种操作，例如：
+<ul>
+    <li>拖动；</li>
+    <li>缩放；</li>
+    <li>旋转；</li>
+    <li>读取数据；</li>
+    <li>以所选格式保存图像等。</li>
+</ul>
+<img
+    class="demo"
+    src="images/15_Work3d.gif"
+    alt="3D 曲面窗口操作"
+    height="415px"/>
+
+</section>
+
+<header id="topic-OasisMontaj">
+<div class="heading">
+与 OasisMontaj 集成
+</div>
+</header>
+<section>
+此应用程序允许使用任何 CSV 文件。但由于该程序是按照 AO "Южморгеология" 的要求创建的，因此，我们将了解如何将 OasisMontaj 数据库导出为 CSV 文件。
+在 OasisMontaj 中的操作步骤：
+<ul>
+    <li>数据库 / 导出 / CSV 等...；</li>
+    <li>选择保存参数；</li>
+    <li>点击“确定”。</li>
+</ul>
+<img
+    class="demo"
+    src="images/16_OasisMontaj.gif"
+    alt="从 OasisMontaj 导出"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Autor">
+    <div class="heading">
+        反馈
+    </div>
+</header>
+<section>
+GraphPythonMag v 1.2.1<br>
+作者：米罗什尼克·德米特里<br>
+    <ul>
+        <li>应用程序开发</li>
+        <li>网页设计</li>
+        <li>地球物理数据处理</li>
+    </ul>
+    如需合作，请联系：dmitrii.miroshnik.92@gmail.com。<br>
+    您也可以感谢作者。<br>
+    我很乐意提供支持和反馈！
+</section>
+
+
+<footer>
+版权所有 &copy; 2024 Dmitrii Miroshnik
+</footer>
+
+</body>
+</html>

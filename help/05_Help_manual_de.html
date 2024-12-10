@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Deutsches Handbuch</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="title-header">
+<div id="title-text">
+    <img
+        id="title-image"
+        src="images/edgetech-logo.png"
+        alt="EdgeTech Logo"/>
+    Hilfe zu GraphPythonMag
+</div>
+</header>
+
+
+<ul>
+    <li><a href="#topic-About">Über das Programm</a></li>
+    <li><a href="#topic-Interface">Programmschnittstelle</a></li>
+    <li><a href="#topic-Graphs">Grafiken</a></li>
+    <li><a href="#topic-Histo">Histogramme</a></li>
+    <li><a href="#topic-Matplotlib">Arbeiten mit dem Matplotlib-Fenster</a></li>
+    <li><a href="#topic-3D">3D-Oberflächen</a></li>
+    <li><a href="#topic-SurfaceWindow">Arbeiten mit dem 3D-Oberflächenfenster</a></li>
+    <li><a href="#topic-OasisMontaj">Integration mit OasisMontaj</a></li>
+    <li><a href="#topic-Autor">Feedback</a></li>
+</ul>
+
+
+<header id="topic-About">
+<div class="heading">
+Über das Programm
+</div>
+</header>
+<section>
+Diese Anwendung wurde entwickelt, um verschiedene geophysikalische Daten anzuzeigen.
+Sie ermöglicht das Erstellen von Diagrammen, Histogrammen und 3D-Oberflächen mit typografischer Qualität.
+Jegliche numerischen Daten im tabellarischen Format, gespeichert in einer CSV-Datei, können als Eingabe verwendet werden.
+</section>
+
+<header id="topic-Interface">
+<div class="heading">
+Programmschnittstelle
+</div>
+</header>
+<section>
+<ul>
+    <li>Klicken Sie auf die Schaltfläche "Öffnen", um die Quell-CSV-Datei zu finden und zu öffnen.</li>
+</ul>
+<img
+    class="demo"
+    src="images/01_Open_File.gif"
+    alt="Datei öffnen"
+    height="415px"/>
+<ul>
+    <li>Verwenden Sie das Dropdown-Menü, um die relevanten Daten auszuwählen.</li>
+</ul>
+<img
+    class="demo"
+    src="images/02_Combobox.gif"
+    alt="Daten auswählen"
+    height="415px"/>
+<ul>
+    <li>Zum Löschen der Daten klicken Sie auf die Schaltfläche "Löschen".</li>
+</ul>
+<img
+    class="demo"
+    src="images/03_Clear.gif"
+    alt="Daten löschen"
+    height="415px"/>
+<ul>
+    <li>Zum Anzeigen von Grafiken klicken Sie auf die Schaltfläche "Anzeigen".</li>
+</ul>
+<img
+    class="demo"
+    src="images/04_Show.gif"
+    alt="Grafiken anzeigen"
+    height="415px"/>
+<ul>
+    <li>Um die Sprache der Benutzeroberfläche zu ändern, wählen Sie eine der verfügbaren Sprachen im Dropdown-Menü "Sprachauswahl".</li>
+</ul>
+<img
+    class="demo"
+    src="images/05_SwitchLanguage.gif"
+    alt="Sprachauswahl"
+    height="415px"/>
+<ul>
+    <li>Bei Fragen können Sie Hilfe erhalten, indem Sie auf die Schaltfläche "Hilfe" klicken.</li>
+</ul>
+<img
+    class="demo"
+    src="images/06_ShowHelp.gif"
+    alt="Hilfe anzeigen"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Graphs">
+<div class="heading">
+Grafiken
+</div>
+</header>
+<section>
+Einfache Diagramme werden mit der wissenschaftlichen Bibliothek Matplotlib erstellt.
+Die folgenden Arten von Diagrammen sind in diesem Programm implementiert:
+<ul>
+    <li>Einfaches Diagramm. Um ein einfaches Diagramm zu erstellen, wählen Sie die Werte einer der beiden Spalten aus: "Messungen des Instruments 1" oder "Messungen des Instruments 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/07_EasyGraph.gif"
+    alt="Einfaches Diagramm"
+    height="415px"/>
+<ul>
+    <li>Kombiniertes Diagramm. Um die Messungen von zwei Instrumenten zu vergleichen, wählen Sie die Werte von zwei Spalten aus: "Messungen des Instruments 1" und "Messungen des Instruments 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/08_DoubleGraph.gif"
+    alt="Kombiniertes Diagramm"
+    height="415px"/>
+<ul>
+    <li>Diagramm in Abhängigkeit von der Entfernung. Sie können auch verschiedene Diagrammoptionen in Abhängigkeit von der Entfernung kombinieren. Wählen Sie dazu den Wert des Entfernungskanals im Dropdown-Menü "Entfernung" aus.</li>
+</ul>
+<img
+    class="demo"
+    src="images/09_DistGraphs.gif"
+    alt="Diagramm in Abhängigkeit von der Entfernung"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Histo">
+<div class="heading">
+Histogramme
+</div>
+</header>
+<section>
+Die Seaborn-Bibliothek wird verwendet, um Histogramme der Normalverteilung zu erstellen.
+Mehrere Optionen sind in diesem Programm implementiert, um die Normalverteilung anzuzeigen:
+<ul>
+    <li>Einfaches überlappendes Histogramm mit einer Normalverteilungskurve.
+        Um zu zeichnen, wählen Sie die Werte einer der beiden Spalten aus: "Messungen des Instruments 1" oder "Messungen des Instruments 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/10_Histo.gif"
+    alt="Einfaches Histogramm"
+    height="415px"/>
+<ul>
+    <li>Kombinierte Histogramme. Um die Messungen zu vergleichen, wählen Sie die Werte von zwei Spalten aus: "Messungen des Instruments 1" und "Messungen des Instruments 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/11_DoubleHisto.gif"
+    alt="Kombinierte Histogramme"
+    height="415px"/>
+<ul>
+    <li>Verteilung der Werte in Abhängigkeit von der Entfernung. Sie können auch verschiedene Anzeigeoptionen in Abhängigkeit von der Entfernung kombinieren. Wählen Sie dazu den Wert des Entfernungskanals im Dropdown-Menü "Entfernung" aus.</li>
+</ul>
+<img
+    class="demo"
+    src="images/12_DistortioanHisto.gif"
+    alt="Verteilung der Werte"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Matplotlib">
+<div class="heading">
+Arbeiten mit dem Matplotlib-Fenster
+</div>
+</header>
+<section>
+Das Matplotlib-Fenster zur Anzeige wissenschaftlicher Grafiken ermöglicht es dem Benutzer, verschiedene Aktionen auszuführen, wie zum Beispiel:
+<ul>
+    <li>Diagramm ziehen;</li>
+    <li>Skalieren;</li>
+    <li>Bereich anzeigen;</li>
+    <li>Bezeichnungen der Achsen ändern;</li>
+    <li>Farbe ändern;</li>
+    <li>Diagramm im ausgewählten Format speichern, usw.</li>
+</ul>
+<img
+    class="demo"
+    src="images/13_Matplotlib.gif"
+    alt="Arbeiten mit dem Matplotlib-Fenster"
+    height="415px"/>
+
+</section>
+
+<header id="topic-3D">
+<div class="heading">
+3D-Oberflächen
+</div>
+</header>
+<section>
+Die Plotly-Bibliothek wird verwendet, um 3D-Oberflächen zu erstellen.
+Um eine Oberfläche zu erstellen, wählen Sie alle 3 Spalten aus: X, Y und Z. !!!Alle Koordinaten müssen im kartesischen System sein!!!
+<img
+    class="demo"
+    src="images/14_3D.gif"
+    alt="3D-Oberfläche"
+    height="415px"/>
+
+</section>
+
+<header id="topic-SurfaceWindow">
+<div class="heading">
+Arbeiten mit dem 3D-Oberflächenfenster
+</div>
+</header>
+<section>
+Das Fenster zur Anzeige der 3D-Oberfläche ermöglicht es dem Benutzer, verschiedene Aktionen auszuführen, wie zum Beispiel:
+<ul>
+    <li>Drag-and-Drop;</li>
+    <li>Skalieren;</li>
+    <li>Drehen;</li>
+    <li>Daten lesen;</li>
+    <li>Bild im ausgewählten Format speichern, usw.</li>
+</ul>
+<img
+    class="demo"
+    src="images/15_Work3d.gif"
+    alt="Arbeiten mit dem 3D-Oberflächenfenster"
+    height="415px"/>
+
+</section>
+
+<header id="topic-OasisMontaj">
+<div class="heading">
+Integration mit OasisMontaj
+</div>
+</header>
+<section>
+Diese Anwendung ermöglicht die Arbeit mit beliebigen CSV-Dateien. Da dieses Programm jedoch im Auftrag von AO "Yuzhmorgeologia" entwickelt wurde,
+sehen wir uns den Vorgang zum Exportieren einer OasisMontaj-Datenbank in eine CSV-Datei an.
+Die Schritte in der OasisMontaj-Umgebung sind wie folgt:
+<ul>
+    <li>Datenbank / Exportieren / CSV usw...;</li>
+    <li>Wählen Sie die Speicherparameter aus;</li>
+    <li>Klicken Sie auf "Ok".</li>
+</ul>
+<img
+    class="demo"
+    src="images/16_OasisMontaj.gif"
+    alt="Exportieren aus OasisMontaj"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Autor">
+    <div class="heading">
+        Feedback
+    </div>
+</header>
+<section>
+    GraphPythonMag v 1.2.1<br>
+    Autor: Dmitrii Miroshnik<br>
+    <ul>
+        <li>Anwendungsentwicklung</li>
+        <li>Webdesign</li>
+        <li>Verarbeitung geophysikalischer Daten</li>
+    </ul>
+    Bei Fragen zur Zusammenarbeit: dmitrii.miroshnik.92@gmail.com.<br>
+    Sie können den Autor auch danken.<br>
+    Ich freue mich über Unterstützung und Feedback!
+</section>
+
+
+<footer>
+Copyright &copy; 2024 Dmitrii Miroshnik
+</footer>
+
+</body>
+</html>

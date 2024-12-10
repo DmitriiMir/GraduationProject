@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <title>Русский мануал</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="title-header">
+<div id="title-text">
+    <img
+        id="title-image"
+        src="images/edgetech-logo.png"
+        alt="EdgeTech logo"/>
+    Справка GraphPythonMag
+</div>
+</header>
+
+
+<ul>
+    <li><a href="#topic-About">О программе</a></li>
+    <li><a href="#topic-Interface">Интерфейс программы</a></li>
+    <li><a href="#topic-Graphs">Графики</a></li>
+    <li><a href="#topic-Histo">Гистограммы</a></li>
+    <li><a href="#topic-Matplotlib">Работа с окном Matplotlib</a></li>
+    <li><a href="#topic-3D">3d-Поверхность</a></li>
+    <li><a href="#topic-SurfaceWindow">Работа с окном 3d-Поверхности</a></li>
+    <li><a href="#topic-OasisMontaj">Интеграция с OasisMontaj</a></li>
+    <li><a href="#topic-Autor">Обратная связь</a></li>
+</ul>
+
+
+<header id="topic-About">
+<div class="heading">
+О программе
+</div>
+</header>
+<section>
+Это приложение для отображения различных геофизических данных.
+В нем реализована возможность создания графиков, гистограмм и зd-поверхностей с типографическим качеством.
+В качестве входных данных могут служить любые числовые данные в табличном виде, и сохраненные в файле с расширением 'CSV'.
+</section>
+
+<header id="topic-Interface">
+<div class="heading">
+Интерфейс программы
+</div>
+</header>
+<section>
+<ul>
+    <li>Нажмите кнопку "Открыть", чтобы найти и открыть исходный CSV-файл.</li>
+</ul>
+<img
+    class="demo"
+    src="images/01_Open_File.gif"
+    alt="Открыть файл"
+    height="415px"/>
+<ul>
+    <li>Используйте выпадающее меню для выбора соответствующих данных.</li>
+</ul>
+<img
+    class="demo"
+    src="images/02_Combobox.gif"
+    alt="Выбор данных"
+    height="415px"/>
+<ul>
+    <li>Для очистки данных, нажмите кнопку "Очистить".</li>
+</ul>
+<img
+    class="demo"
+    src="images/03_Clear.gif"
+    alt="Очистить данные"
+    height="415px"/>
+<ul>
+    <li>Для выполнения графических построений, нажмите кнопку "Показать".</li>
+</ul>
+<img
+    class="demo"
+    src="images/04_Show.gif"
+    alt="Показать графики"
+    height="415px"/>
+<ul>
+    <li>Чтобы сменить язык интерфейса, выберите один из доступных языков в выпадающем меню "Выбор языка".</li>
+</ul>
+<img
+    class="demo"
+    src="images/05_SwitchLanguage.gif"
+    alt="Выбор языка"
+    height="415px"/>
+<ul>
+    <li>При возникновении вопросов, вы можете обратиться за помощью, нажав кнопку "Справка".</li>
+</ul>
+<img
+    class="demo"
+    src="images/06_ShowHelp.gif"
+    alt="Вызов справки"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Graphs">
+<div class="heading">
+Графики
+</div>
+</header>
+<section>
+Для построения простых графиков используется научная библиотека Matplotlib.
+    В данной программе реализованы следующие варианты графиков:
+<ul>
+    <li>Простой график. Для построения простого графика, выберите значения любой одной из двух колонок:
+    "Показания прибора 1" или "Показания прибора 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/07_EasyGraph.gif"
+    alt="Простой график"
+    height="415px"/>
+<ul>
+    <li>Комбинированный график. Для сравнения показаний двух приборов, выберите значения для двух колонок:
+    "Показания прибора 1" и "Показания прибора 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/08_DoubleGraph.gif"
+    alt="Комбинированный график"
+    height="415px"/>
+<ul>
+    <li>График зависимости от дистанции. Вы также можете комбинировать различные варианты графиков в зависимости от дистанции.
+    Для этого, выберите значение канала дистанции из выпадающего меню "Дистанция".</li>
+</ul>
+<img
+    class="demo"
+    src="images/09_DistGraphs.gif"
+    alt="График зависимости"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Histo">
+<div class="heading">
+Гистограммы
+</div>
+</header>
+<section>
+Для построения гистограмм нормального распределения, используется надстройка для Matplotlib - библиотека Seaborn.
+    В данной программе реализованы несколько вариантов отображения нормального распределения:
+<ul>
+    <li>Простая гистограмма, совмещенная с графиком нормального распределения.
+        Для построения, выберите значения любой одной из двух колонок:
+    "Показания прибора 1" или "Показания прибора 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/10_Histo.gif"
+    alt="Простая гистограмма"
+    height="415px"/>
+<ul>
+    <li>Комбинированные гистограммы. Для сравнения показаний, выберите значения для двух колонок:
+    "Показания прибора 1" и "Показания прибора 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/11_DoubleHisto.gif"
+    alt="Комбинированные гистограммы"
+    height="415px"/>
+<ul>
+    <li>Распределение значений в зависимости от дистанции. Вы также можете комбинировать различные варианты отображения в зависимости от дистанции.
+    Для этого, выберите значение канала дистанции из выпадающего меню "Дистанция".</li>
+</ul>
+<img
+    class="demo"
+    src="images/12_DistortioanHisto.gif"
+    alt="Распределение значений"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Matplotlib">
+<div class="heading">
+Работа с окном Matplotlib
+</div>
+</header>
+<section>
+Окно отображения научной графики - Matplotlib, позволяет пользователю выполнять различные действия, такие как:
+<ul>
+    <li>Перетаскивание графика;</li>
+    <li>Масштабирование;</li>
+    <li>Отображение области построения;</li>
+    <li>Изменение подписей к осям;</li>
+    <li>Изменение цвета;</li>
+    <li>Сохранение графика в выбранном формате и т.д.</li>
+</ul>
+<img
+    class="demo"
+    src="images/13_Matplotlib.gif"
+    alt="Работа с окном Matplotlib"
+    height="415px"/>
+
+</section>
+
+<header id="topic-3D">
+<div class="heading">
+3d-Поверхность
+</div>
+</header>
+<section>
+Для построения 3d-Поверхности, используется библиотека Plotly.
+Для построения поверхности выберите все 3 колонки: X, Y и Z. !!!Все координаты должны быть в прямоугольной системе!!!
+<img
+    class="demo"
+    src="images/14_3D.gif"
+    alt="3d-Поверхность"
+    height="415px"/>
+
+</section>
+
+<header id="topic-SurfaceWindow">
+<div class="heading">
+Работа с окном 3d-Поверхности
+</div>
+</header>
+<section>
+Окно отображения 3d-Поверхности, позволяет пользователю выполнять различные действия, такие как:
+<ul>
+    <li>Перетаскивание;</li>
+    <li>Масштабирование;</li>
+    <li>Вращение;</li>
+    <li>Считывание данных;</li>
+    <li>Сохранение изображения выбранном формате и т.д.</li>
+</ul>
+<img
+    class="demo"
+    src="images/15_Work3d.gif"
+    alt="Работа с окном 3d-Поверхности"
+    height="415px"/>
+
+</section>
+
+<header id="topic-OasisMontaj">
+<div class="heading">
+Интеграция с OasisMontaj
+</div>
+</header>
+<section>
+Данное приложение позволяет работать с любым CSV-файлом. Но т.к. эта программа была создана по заказу АО "Южморгеология",
+ для работы с базами данных OasisMontaj, разберем порядок экспорта базы данных в CSV-файл.
+Порядок действий в среде OasisMontaj:
+<ul>
+    <li>Database / Export / CSV etc...;</li>
+    <li>Выбираем параметры сохранения;</li>
+    <li>Жмем "Ok".</li>
+</ul>
+<img
+    class="demo"
+    src="images/16_OasisMontaj.gif"
+    alt="Экспорт из OasisMontaj"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Autor">
+    <div class="heading">
+        Обратная связь
+    </div>
+</header>
+<section>
+    GraphPythonMag v 1.2.1<br>
+    Автор: Мирошник Дмитрий<br>
+    <ul>
+        <li>Разработка приложений</li>
+        <li>Веб-дизайн</li>
+        <li>Обработка геофизических данных</li>
+    </ul>
+    По вопросам сотрудничества: dmitrii.miroshnik.92@gmail.com.<br>
+    Также вы можете поблагодарить Автора.<br>
+    Буду рад поддержке и обратной связи!
+</section>
+
+
+<footer>
+Copyright &copy; 2024 Dmitrii Miroshnik
+</footer>
+
+</body>
+</html>

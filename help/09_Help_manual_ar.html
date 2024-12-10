@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <title>الدليل العربي</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="title-header">
+<div id="title-text">
+    <img
+        id="title-image"
+        src="images/edgetech-logo.png"
+        alt="شعار إيدج تك"/>
+    مساعدة GraphPythonMag
+</div>
+</header>
+
+
+<ul>
+    <li><a href="#topic-About">حول البرنامج</a></li>
+    <li><a href="#topic-Interface">واجهة البرنامج</a></li>
+    <li><a href="#topic-Graphs">الرسوم البيانية</a></li>
+    <li><a href="#topic-Histo">الهيستوغرامات</a></li>
+    <li><a href="#topic-Matplotlib">العمل مع نافذة Matplotlib</a></li>
+    <li><a href="#topic-3D">السطح ثلاثي الأبعاد</a></li>
+    <li><a href="#topic-SurfaceWindow">العمل مع نافذة السطح ثلاثي الأبعاد</a></li>
+    <li><a href="#topic-OasisMontaj">التكامل مع OasisMontaj</a></li>
+    <li><a href="#topic-Autor">الردود</a></li>
+</ul>
+
+
+<header id="topic-About">
+<div class="heading">
+حول البرنامج
+</div>
+</header>
+<section>
+هذا التطبيق لعرض مجموعة متنوعة من البيانات الجيوفيزيائية.
+يتضمن القدرة على إنشاء رسوم بيانية، وهيستوغرامات، وسطح ثلاثي الأبعاد بجودة طباعية.
+يمكن استخدام أي بيانات رقمية موجودة في جدول وتخزينها في ملف بامتداد 'CSV' كبيانات مدخلة.
+</section>
+
+<header id="topic-Interface">
+<div class="heading">
+واجهة البرنامج
+</div>
+</header>
+<section>
+<ul>
+    <li>انقر فوق الزر "فتح" للعثور على وفتح ملف CSV المصدر.</li>
+</ul>
+<img
+    class="demo"
+    src="images/01_Open_File.gif"
+    alt="فتح الملف"
+    height="415px"/>
+<ul>
+    <li>استخدم القائمة المنسدلة لتحديد البيانات المناسبة.</li>
+</ul>
+<img
+    class="demo"
+    src="images/02_Combobox.gif"
+    alt="تحديد البيانات"
+    height="415px"/>
+<ul>
+    <li>لمسح البيانات، انقر فوق الزر "مسح".</li>
+</ul>
+<img
+    class="demo"
+    src="images/03_Clear.gif"
+    alt="مسح البيانات"
+    height="415px"/>
+<ul>
+    <li>لإجراء التحليل البياني، انقر فوق الزر "إظهار".</li>
+</ul>
+<img
+    class="demo"
+    src="images/04_Show.gif"
+    alt="عرض الرسوم البيانية"
+    height="415px"/>
+<ul>
+    <li>لتغيير لغة الواجهة، حدد إحدى اللغات المتاحة في القائمة المنسدلة "تحديد اللغة".</li>
+</ul>
+<img
+    class="demo"
+    src="images/05_SwitchLanguage.gif"
+    alt="تحديد اللغة"
+    height="415px"/>
+<ul>
+    <li>عند الحاجة إلى المساعدة، يمكنك الحصول عليها عن طريق النقر على زر "مساعدة".</li>
+</ul>
+<img
+    class="demo"
+    src="images/06_ShowHelp.gif"
+    alt="استدعاء المساعدة"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Graphs">
+<div class="heading">
+الرسوم البيانية
+</div>
+</header>
+<section>
+لإنشاء الرسوم البيانية البسيطة، يتم استخدام مكتبة Matplotlib العلمية.
+يتم تنفيذ الأنواع التالية من الرسوم البيانية في هذا البرنامج:
+<ul>
+    <li>الرسم البياني البسيط. لإنشاء رسم بياني بسيط، حدد قيم أي من عمودي "قراءات الجهاز 1" أو "قراءات الجهاز 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/07_EasyGraph.gif"
+    alt="الرسم البياني البسيط"
+    height="415px"/>
+<ul>
+    <li>الرسم البياني المدمج. لمقارنة قراءات جهازين، حدد القيم لعمودين: "قراءات الجهاز 1" و "قراءات الجهاز 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/08_DoubleGraph.gif"
+    alt="الرسم البياني المدمج"
+    height="415px"/>
+<ul>
+    <li>رسم بياني يعتمد على المسافة. يمكنك أيضًا دمج مختلف أنواع الرسوم البيانية حسب المسافة.
+    لذلك، حدد قيمة قناة المسافة من القائمة المنسدلة "المسافة".</li>
+</ul>
+<img
+    class="demo"
+    src="images/09_DistGraphs.gif"
+    alt="رسم بياني يعتمد على المسافة"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Histo">
+<div class="heading">
+الهيستوغرامات
+</div>
+</header>
+<section>
+لإنشاء هيستوغرامات للتوزيع الطبيعي، يتم استخدام إضافة Seaborn لمكتبة Matplotlib.
+يتم تنفيذ أنماط عرض مختلفة للتوزيع الطبيعي في هذا البرنامج:
+<ul>
+    <li>هيستوغرام بسيط، متزامن مع رسم بياني للتوزيع الطبيعي.
+        لإنشاءه، حدد قيمة أي من عمودي "قراءات الجهاز 1" أو "قراءات الجهاز 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/10_Histo.gif"
+    alt="هيستوغرام بسيط"
+    height="415px"/>
+<ul>
+    <li>هيستوغرامات مدمجة. لمقارنة القراءات، حدد القيم لعمودين: "قراءات الجهاز 1" و "قراءات الجهاز 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/11_DoubleHisto.gif"
+    alt="هيستوغرامات مدمجة"
+    height="415px"/>
+<ul>
+    <li>توزيع القيم بناءً على المسافة. يمكنك أيضًا دمج أنماط عرض مختلفة حسب المسافة.
+    لذلك، حدد قيمة قناة المسافة من القائمة المنسدلة "المسافة".</li>
+</ul>
+<img
+    class="demo"
+    src="images/12_DistortioanHisto.gif"
+    alt="توزيع القيم"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Matplotlib">
+<div class="heading">
+العمل مع نافذة Matplotlib
+</div>
+</header>
+<section>
+نافذة عرض الرسوم العلمية - Matplotlib، تسمح للمستخدم بتنفيذ إجراءات متنوعة، مثل:
+<ul>
+    <li>سحب الرسم البياني؛</li>
+    <li>تغيير المقياس؛</li>
+    <li>عرض منطقة العرض؛</li>
+    <li>تغيير تسميات المحاور؛</li>
+    <li>تغيير اللون؛</li>
+    <li>حفظ الرسم البياني بتنسيق محدد وما إلى ذلك.</li>
+</ul>
+<img
+    class="demo"
+    src="images/13_Matplotlib.gif"
+    alt="العمل مع نافذة Matplotlib"
+    height="415px"/>
+
+</section>
+
+<header id="topic-3D">
+<div class="heading">
+السطح ثلاثي الأبعاد
+</div>
+</header>
+<section>
+لإنشاء سطح ثلاثي الأبعاد، يتم استخدام مكتبة Plotly.
+لإنشاء السطح، حدد كل من الأعمدة الثلاث: X، Y، و Z. !!!يجب أن تكون جميع الإحداثيات في نظام مستطيل!!!
+<img
+    class="demo"
+    src="images/14_3D.gif"
+    alt="السطح ثلاثي الأبعاد"
+    height="415px"/>
+
+</section>
+
+<header id="topic-SurfaceWindow">
+<div class="heading">
+العمل مع نافذة السطح ثلاثي الأبعاد
+</div>
+</header>
+<section>
+نافذة عرض السطح ثلاثي الأبعاد، تسمح للمستخدم بتنفيذ إجراءات متنوعة، مثل:
+<ul>
+    <li>سحب؛</li>
+    <li>تغيير المقياس؛</li>
+    <li>الدوران؛</li>
+    <li>قراءة البيانات؛</li>
+    <li>حفظ الصورة بتنسيق محدد وما إلى ذلك.</li>
+</ul>
+<img
+    class="demo"
+    src="images/15_Work3d.gif"
+    alt="العمل مع نافذة السطح ثلاثي الأبعاد"
+    height="415px"/>
+
+</section>
+
+<header id="topic-OasisMontaj">
+<div class="heading">
+التكامل مع OasisMontaj
+</div>
+</header>
+<section>
+يتيح هذا التطبيق العمل مع أي ملف CSV. ولكن نظرًا لأن هذا البرنامج تم تطويره بناءً على طلب شركة "يوجمورغيولوجيا"،
+ سنشرح عملية تصدير قاعدة بيانات OasisMontaj إلى ملف CSV.
+الخطوات في برنامج OasisMontaj:
+<ul>
+    <li>قاعدة البيانات / تصدير / CSV وما إلى ذلك ...؛</li>
+    <li>اختيار معلمات الحفظ؛</li>
+    <li>انقر فوق "موافق".</li>
+</ul>
+<img
+    class="demo"
+    src="images/16_OasisMontaj.gif"
+    alt="تصدير من OasisMontaj"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Autor">
+    <div class="heading">
+        الردود
+    </div>
+</header>
+<section>
+    GraphPythonMag v 1.2.1<br>
+    الكاتب: دميتري ميروشنيك<br>
+    <ul>
+        <li>تطوير التطبيقات</li>
+        <li>تصميم الويب</li>
+        <li>معالجة البيانات الجيوفيزيائية</li>
+    </ul>
+    للاستفسارات حول التعاون: dmitrii.miroshnik.92@gmail.com.<br>
+    يمكنك أيضًا شكر الكاتب.<br>
+    سأكون سعيدًا بالدعم والردود!
+</section>
+
+
+<footer>
+حقوق النشر &copy; 2024 دميتري ميروشنيك
+</footer>
+
+</body>
+</html>

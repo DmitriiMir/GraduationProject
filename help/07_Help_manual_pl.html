@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Podręcznik GraphPythonMag</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="title-header">
+<div id="title-text">
+    <img
+        id="title-image"
+        src="images/edgetech-logo.png"
+        alt="Logo EdgeTech"/>
+    Przewodnik po GraphPythonMag
+</div>
+</header>
+
+
+<ul>
+    <li><a href="#topic-About">O programie</a></li>
+    <li><a href="#topic-Interface">Interfejs programu</a></li>
+    <li><a href="#topic-Graphs">Wykresy</a></li>
+    <li><a href="#topic-Histo">Histogramy</a></li>
+    <li><a href="#topic-Matplotlib">Praca z oknem Matplotlib</a></li>
+    <li><a href="#topic-3D">Powierzchnie 3D</a></li>
+    <li><a href="#topic-SurfaceWindow">Praca z oknem powierzchni 3D</a></li>
+    <li><a href="#topic-OasisMontaj">Integracja z OasisMontaj</a></li>
+    <li><a href="#topic-Autor">Kontakt</a></li>
+</ul>
+
+
+<header id="topic-About">
+<div class="heading">
+O programie
+</div>
+</header>
+<section>
+To aplikacja służąca do wizualizacji różnych danych geofizycznych.
+Zawiera możliwość tworzenia wykresów, histogramów i powierzchni 3D o jakości typograficznej.
+Dane liczbowe w formacie tabelarycznym, zapisane w pliku CSV, mogą być używane jako dane wejściowe.
+</section>
+
+<header id="topic-Interface">
+<div class="heading">
+Interfejs programu
+</div>
+</header>
+<section>
+<ul>
+    <li>Kliknij przycisk "Otwórz", aby znaleźć i otworzyć plik CSV źródłowy.</li>
+</ul>
+<img
+    class="demo"
+    src="images/01_Open_File.gif"
+    alt="Otwórz plik"
+    height="415px"/>
+<ul>
+    <li>Użyj menu rozwijanego, aby wybrać odpowiednie dane.</li>
+</ul>
+<img
+    class="demo"
+    src="images/02_Combobox.gif"
+    alt="Wybór danych"
+    height="415px"/>
+<ul>
+    <li>Aby wyczyścić dane, kliknij przycisk "Wyczyść".</li>
+</ul>
+<img
+    class="demo"
+    src="images/03_Clear.gif"
+    alt="Wyczyść dane"
+    height="415px"/>
+<ul>
+    <li>Aby wykonać wizualizacje graficzne, kliknij przycisk "Pokaż".</li>
+</ul>
+<img
+    class="demo"
+    src="images/04_Show.gif"
+    alt="Pokaż wykresy"
+    height="415px"/>
+<ul>
+    <li>Aby zmienić język interfejsu, wybierz jeden z dostępnych języków w menu rozwijanym "Wybór języka".</li>
+</ul>
+<img
+    class="demo"
+    src="images/05_SwitchLanguage.gif"
+    alt="Wybór języka"
+    height="415px"/>
+<ul>
+    <li>W razie pytań, możesz uzyskać pomoc, klikając przycisk "Pomoc".</li>
+</ul>
+<img
+    class="demo"
+    src="images/06_ShowHelp.gif"
+    alt="Pokaż pomoc"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Graphs">
+<div class="heading">
+Wykresy
+</div>
+</header>
+<section>
+Do tworzenia prostych wykresów używana jest biblioteka naukowa Matplotlib.
+Zaimplementowano następujące rodzaje wykresów w tej aplikacji:
+<ul>
+    <li>Prosty wykres. Aby utworzyć prosty wykres, wybierz wartości jednej z dwóch kolumn: "Wskazania urządzenia 1" lub "Wskazania urządzenia 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/07_EasyGraph.gif"
+    alt="Prosty wykres"
+    height="415px"/>
+<ul>
+    <li>Wykres kombinowany. Aby porównać pomiary dwóch urządzeń, wybierz wartości dwóch kolumn: "Wskazania urządzenia 1" i "Wskazania urządzenia 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/08_DoubleGraph.gif"
+    alt="Wykres kombinowany"
+    height="415px"/>
+<ul>
+    <li>Wykres w zależności od odległości. Możesz również łączyć różne opcje wykresów w zależności od odległości. Aby to zrobić, wybierz wartość kanału odległości z menu rozwijanego "Odległość".</li>
+</ul>
+<img
+    class="demo"
+    src="images/09_DistGraphs.gif"
+    alt="Wykres w zależności od odległości"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Histo">
+<div class="heading">
+Histogramy
+</div>
+</header>
+<section>
+Do tworzenia histogramów rozkładu normalnego używana jest biblioteka Seaborn, rozszerzenie Matplotlib.
+Zaimplementowano różne opcje wyświetlania rozkładu normalnego w tej aplikacji:
+<ul>
+    <li>Prosty histogram, nakładający się na krzywą rozkładu normalnego.
+        Aby to zrobić, wybierz wartości jednej z dwóch kolumn: "Wskazania urządzenia 1" lub "Wskazania urządzenia 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/10_Histo.gif"
+    alt="Prosty histogram"
+    height="415px"/>
+<ul>
+    <li>Łączone histogramy. Aby porównać pomiary, wybierz wartości dwóch kolumn: "Wskazania urządzenia 1" i "Wskazania urządzenia 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/11_DoubleHisto.gif"
+    alt="Łączone histogramy"
+    height="415px"/>
+<ul>
+    <li>Rozkład wartości w zależności od odległości. Możesz również łączyć różne opcje wyświetlania w zależności od odległości. Aby to zrobić, wybierz wartość kanału odległości z menu rozwijanego "Odległość".</li>
+</ul>
+<img
+    class="demo"
+    src="images/12_DistortioanHisto.gif"
+    alt="Rozkład wartości"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Matplotlib">
+<div class="heading">
+Praca z oknem Matplotlib
+</div>
+</header>
+<section>
+Okno do wyświetlania wykresów naukowych - Matplotlib, umożliwia użytkownikowi różne działania, takie jak:
+<ul>
+    <li>Przeciąganie wykresu;</li>
+    <li>Zmiana skali;</li>
+    <li>Wyświetlanie obszaru;</li>
+    <li>Zmiana etykiet osi;</li>
+    <li>Zmiana koloru;</li>
+    <li>Zapisywanie wykresu w wybranym formacie itp.</li>
+</ul>
+<img
+    class="demo"
+    src="images/13_Matplotlib.gif"
+    alt="Praca z oknem Matplotlib"
+    height="415px"/>
+
+</section>
+
+<header id="topic-3D">
+<div class="heading">
+Powierzchnie 3D
+</div>
+</header>
+<section>
+Do tworzenia powierzchni 3D używana jest biblioteka Plotly.
+Aby utworzyć powierzchnię, wybierz wszystkie 3 kolumny: X, Y i Z. !!!Wszystkie współrzędne muszą być w układzie prostokątnym!!!
+<img
+    class="demo"
+    src="images/14_3D.gif"
+    alt="Powierzchnie 3D"
+    height="415px"/>
+
+</section>
+
+<header id="topic-SurfaceWindow">
+<div class="heading">
+Praca z oknem powierzchni 3D
+</div>
+</header>
+<section>
+Okno do wyświetlania powierzchni 3D umożliwia użytkownikowi różne działania, takie jak:
+<ul>
+    <li>Przeciąganie;</li>
+    <li>Zmiana skali;</li>
+    <li>Obracanie;</li>
+    <li>Odczytywanie danych;</li>
+    <li>Zapisywanie obrazu w wybranym formacie itp.</li>
+</ul>
+<img
+    class="demo"
+    src="images/15_Work3d.gif"
+    alt="Praca z oknem powierzchni 3D"
+    height="415px"/>
+
+</section>
+
+<header id="topic-OasisMontaj">
+<div class="heading">
+Integracja z OasisMontaj
+</div>
+</header>
+<section>
+Ta aplikacja umożliwia pracę z dowolnym plikiem CSV. Jednakże, ponieważ została ona stworzona na zamówienie AO "Yuzhmorgeologia",
+ omówimy proces eksportu bazy danych OasisMontaj do pliku CSV.
+Kroki w środowisku OasisMontaj są następujące:
+<ul>
+    <li>Baza danych / Eksport / CSV itp.;</li>
+    <li>Wybierz parametry zapisu;</li>
+    <li>Kliknij "Ok".</li>
+</ul>
+<img
+    class="demo"
+    src="images/16_OasisMontaj.gif"
+    alt="Eksport z OasisMontaj"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Autor">
+    <div class="heading">
+        Kontakt
+    </div>
+</header>
+<section>
+    GraphPythonMag v 1.2.1<br>
+    Autor: Dmitrii Miroshnik<br>
+    <ul>
+        <li>Tworzenie aplikacji</li>
+        <li>Projektowanie stron internetowych</li>
+        <li>Przetwarzanie danych geofizycznych</li>
+    </ul>
+    W sprawie współpracy: dmitrii.miroshnik.92@gmail.com.<br>
+    Możesz także podziękować Autorowi.<br>
+    Będzie wdzięczny za wsparcie i opinie!
+</section>
+
+
+<footer>
+Prawa autorskie &copy; 2024 Dmitrii Miroshnik
+</footer>
+
+</body>
+</html>

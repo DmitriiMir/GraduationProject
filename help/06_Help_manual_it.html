@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Manuale Italiano</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="title-header">
+<div id="title-text">
+    <img
+        id="title-image"
+        src="images/edgetech-logo.png"
+        alt="Logo EdgeTech"/>
+    Guida GraphPythonMag
+</div>
+</header>
+
+
+<ul>
+    <li><a href="#topic-About">Informazioni sul Programma</a></li>
+    <li><a href="#topic-Interface">Interfaccia del Programma</a></li>
+    <li><a href="#topic-Graphs">Grafici</a></li>
+    <li><a href="#topic-Histo">Istogrammi</a></li>
+    <li><a href="#topic-Matplotlib">Lavorare con la Finestra di Matplotlib</a></li>
+    <li><a href="#topic-3D">Superfici 3D</a></li>
+    <li><a href="#topic-SurfaceWindow">Lavorare con la Finestra delle Superfici 3D</a></li>
+    <li><a href="#topic-OasisMontaj">Integrazione con OasisMontaj</a></li>
+    <li><a href="#topic-Autor">Feedback</a></li>
+</ul>
+
+
+<header id="topic-About">
+<div class="heading">
+Informazioni sul Programma
+</div>
+</header>
+<section>
+Questa applicazione è progettata per visualizzare vari dati geofisici.
+Offre la possibilità di creare grafici, istogrammi e superfici 3D con qualità tipografica.
+I dati numerici in formato tabellare, salvati in un file CSV, possono essere utilizzati come input.
+</section>
+
+<header id="topic-Interface">
+<div class="heading">
+Interfaccia del Programma
+</div>
+</header>
+<section>
+<ul>
+    <li>Fare clic sul pulsante "Apri" per trovare e aprire il file CSV di origine.</li>
+</ul>
+<img
+    class="demo"
+    src="images/01_Open_File.gif"
+    alt="Aprire il file"
+    height="415px"/>
+<ul>
+    <li>Usare il menu a discesa per selezionare i dati pertinenti.</li>
+</ul>
+<img
+    class="demo"
+    src="images/02_Combobox.gif"
+    alt="Selezione dati"
+    height="415px"/>
+<ul>
+    <li>Per eliminare i dati, fare clic sul pulsante "Cancella".</li>
+</ul>
+<img
+    class="demo"
+    src="images/03_Clear.gif"
+    alt="Cancellare i dati"
+    height="415px"/>
+<ul>
+    <li>Per eseguire la rappresentazione grafica, fare clic sul pulsante "Mostra".</li>
+</ul>
+<img
+    class="demo"
+    src="images/04_Show.gif"
+    alt="Mostrare i grafici"
+    height="415px"/>
+<ul>
+    <li>Per cambiare lingua dell'interfaccia, selezionare una delle lingue disponibili nel menu a discesa "Selezione Lingua".</li>
+</ul>
+<img
+    class="demo"
+    src="images/05_SwitchLanguage.gif"
+    alt="Selezione Lingua"
+    height="415px"/>
+<ul>
+    <li>In caso di domande, è possibile richiedere assistenza facendo clic sul pulsante "Guida".</li>
+</ul>
+<img
+    class="demo"
+    src="images/06_ShowHelp.gif"
+    alt="Visualizzare la Guida"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Graphs">
+<div class="heading">
+Grafici
+</div>
+</header>
+<section>
+Per la creazione di grafici semplici viene utilizzata la libreria scientifica Matplotlib.
+Sono implementati i seguenti tipi di grafici in questo programma:
+<ul>
+    <li>Grafico semplice. Per creare un grafico semplice, selezionare i valori di una delle due colonne: "Misure Strumento 1" o "Misure Strumento 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/07_EasyGraph.gif"
+    alt="Grafico Semplice"
+    height="415px"/>
+<ul>
+    <li>Grafico combinato. Per confrontare le misurazioni di due strumenti, selezionare i valori di due colonne: "Misure Strumento 1" e "Misure Strumento 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/08_DoubleGraph.gif"
+    alt="Grafico Combinato"
+    height="415px"/>
+<ul>
+    <li>Grafico in funzione della distanza. È inoltre possibile combinare diverse opzioni di grafico in funzione della distanza. Per fare ciò, selezionare il valore del canale di distanza nel menu a discesa "Distanza".</li>
+</ul>
+<img
+    class="demo"
+    src="images/09_DistGraphs.gif"
+    alt="Grafico in funzione della distanza"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Histo">
+<div class="heading">
+Istogrammi
+</div>
+</header>
+<section>
+Per la creazione degli istogrammi della distribuzione normale viene utilizzata la libreria Seaborn, un'estensione di Matplotlib.
+Sono implementate diverse opzioni per mostrare la distribuzione normale in questo programma:
+<ul>
+    <li>Istogramma semplice sovrapposto con una curva di distribuzione normale.
+        Per disegnare, selezionare i valori di una delle due colonne: "Misure Strumento 1" o "Misure Strumento 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/10_Histo.gif"
+    alt="Istogramma Semplice"
+    height="415px"/>
+<ul>
+    <li>Istogrammi combinati. Per confrontare le misurazioni, selezionare i valori di due colonne: "Misure Strumento 1" e "Misure Strumento 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/11_DoubleHisto.gif"
+    alt="Istogrammi Combinati"
+    height="415px"/>
+<ul>
+    <li>Distribuzione dei valori in funzione della distanza. È inoltre possibile combinare diverse opzioni di visualizzazione in funzione della distanza. Per fare ciò, selezionare il valore del canale di distanza nel menu a discesa "Distanza".</li>
+</ul>
+<img
+    class="demo"
+    src="images/12_DistortioanHisto.gif"
+    alt="Distribuzione dei valori"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Matplotlib">
+<div class="heading">
+Lavorare con la Finestra di Matplotlib
+</div>
+</header>
+<section>
+La finestra per la visualizzazione dei grafici scientifici - Matplotlib, consente all'utente di eseguire varie azioni, tra cui:
+<ul>
+    <li>Trascinamento del grafico;</li>
+    <li>Zoom;</li>
+    <li>Visualizzazione dell'area;</li>
+    <li>Modifica delle etichette degli assi;</li>
+    <li>Cambiamento del colore;</li>
+    <li>Salvataggio del grafico nel formato selezionato, ecc.</li>
+</ul>
+<img
+    class="demo"
+    src="images/13_Matplotlib.gif"
+    alt="Lavorare con la Finestra di Matplotlib"
+    height="415px"/>
+
+</section>
+
+<header id="topic-3D">
+<div class="heading">
+Superfici 3D
+</div>
+</header>
+<section>
+Per la creazione delle superfici 3D, viene utilizzata la libreria Plotly.
+Per disegnare una superficie, selezionare tutte e 3 le colonne: X, Y e Z. !!!Tutte le coordinate devono essere nel sistema cartesiano!!!
+<img
+    class="demo"
+    src="images/14_3D.gif"
+    alt="Superficie 3D"
+    height="415px"/>
+
+</section>
+
+<header id="topic-SurfaceWindow">
+<div class="heading">
+Lavorare con la Finestra delle Superfici 3D
+</div>
+</header>
+<section>
+La finestra per la visualizzazione delle superfici 3D consente all'utente di eseguire varie azioni, tra cui:
+<ul>
+    <li>Trascinamento;</li>
+    <li>Zoom;</li>
+    <li>Rotazione;</li>
+    <li>Lettura dei dati;</li>
+    <li>Salvataggio dell'immagine nel formato selezionato, ecc.</li>
+</ul>
+<img
+    class="demo"
+    src="images/15_Work3d.gif"
+    alt="Lavorare con la Finestra delle Superfici 3D"
+    height="415px"/>
+
+</section>
+
+<header id="topic-OasisMontaj">
+<div class="heading">
+Integrazione con OasisMontaj
+</div>
+</header>
+<section>
+Questa applicazione consente di lavorare con qualsiasi file CSV. Tuttavia, poiché questo programma è stato sviluppato su richiesta di AO "Yuzhmorgeologia",
+ vedremo il processo di esportazione di un database OasisMontaj in un file CSV.
+I passaggi nell'ambiente OasisMontaj sono i seguenti:
+<ul>
+    <li>Database / Esporta / CSV ecc...;</li>
+    <li>Selezionare i parametri di salvataggio;</li>
+    <li>Fare clic su "Ok".</li>
+</ul>
+<img
+    class="demo"
+    src="images/16_OasisMontaj.gif"
+    alt="Esportazione da OasisMontaj"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Autor">
+    <div class="heading">
+        Feedback
+    </div>
+</header>
+<section>
+    GraphPythonMag v 1.2.1<br>
+    Autore: Dmitrii Miroshnik<br>
+    <ul>
+        <li>Sviluppo dell'applicazione</li>
+        <li>Web design</li>
+        <li>Elaborazione dei dati geofisici</li>
+    </ul>
+    Per domande sulla collaborazione: dmitrii.miroshnik.92@gmail.com.<br>
+    Puoi anche ringraziare l'autore.<br>
+    Sarà felice di ricevere supporto e feedback!
+</section>
+
+
+<footer>
+Copyright &copy; 2024 Dmitrii Miroshnik
+</footer>
+
+</body>
+</html>

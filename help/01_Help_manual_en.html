@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>English Manual</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="title-header">
+<div id="title-text">
+    <img
+        id="title-image"
+        src="images/edgetech-logo.png"
+        alt="EdgeTech logo"/>
+    GraphPythonMag Help
+</div>
+</header>
+
+
+<ul>
+    <li><a href="#topic-About">About Program</a></li>
+    <li><a href="#topic-Interface">Program Interface</a></li>
+    <li><a href="#topic-Graphs">Graphs</a></li>
+    <li><a href="#topic-Histo">Histograms</a></li>
+    <li><a href="#topic-Matplotlib">Working with Matplotlib Window</a></li>
+    <li><a href="#topic-3D">3D Surface</a></li>
+    <li><a href="#topic-SurfaceWindow">Working with 3D Surface Window</a></li>
+    <li><a href="#topic-OasisMontaj">Integration with OasisMontaj</a></li>
+    <li><a href="#topic-Autor">Feedback</a></li>
+</ul>
+
+
+<header id="topic-About">
+<div class="heading">
+About Program
+</div>
+</header>
+<section>
+This application is designed for displaying various geophysical data.
+It allows creating high-quality graphs, histograms, and 3D surfaces.
+Any numerical data in tabular format saved in a CSV file can be used as input data.
+</section>
+
+<header id="topic-Interface">
+<div class="heading">
+Program Interface
+</div>
+</header>
+<section>
+<ul>
+    <li>Click the "Open" button to find and open the source CSV file.</li>
+</ul>
+<img
+    class="demo"
+    src="images/01_Open_File.gif"
+    alt="Open file"
+    height="415px"/>
+<ul>
+    <li>Use the dropdown menu to select the relevant data.</li>
+</ul>
+<img
+    class="demo"
+    src="images/02_Combobox.gif"
+    alt="Select data"
+    height="415px"/>
+<ul>
+    <li>To clear the data, click the "Clear" button.</li>
+</ul>
+<img
+    class="demo"
+    src="images/03_Clear.gif"
+    alt="Clear data"
+    height="415px"/>
+<ul>
+    <li>To perform graphical plotting, click the "Show" button.</li>
+</ul>
+<img
+    class="demo"
+    src="images/04_Show.gif"
+    alt="Show plots"
+    height="415px"/>
+<ul>
+    <li>To switch the interface language, select one of the available languages from the "Language Selection" dropdown menu.</li>
+</ul>
+<img
+    class="demo"
+    src="images/05_SwitchLanguage.gif"
+    alt="Language selection"
+    height="415px"/>
+<ul>
+    <li>If you have any questions, you can seek help by clicking the "Help" button.</li>
+</ul>
+<img
+    class="demo"
+    src="images/06_ShowHelp.gif"
+    alt="Show help"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Graphs">
+<div class="heading">
+Graphs
+</div>
+</header>
+<section>
+Simple graphs are created using the Matplotlib scientific library.
+The following types of graphs are implemented in this program:
+<ul>
+    <li>Simple graph. To plot a simple graph, select the values of any one of the two columns: "Instrument 1 Readings" or "Instrument 2 Readings".</li>
+</ul>
+<img
+    class="demo"
+    src="images/07_EasyGraph.gif"
+    alt="Simple graph"
+    height="415px"/>
+<ul>
+    <li>Combined graph. To compare the readings of two instruments, select the values for two columns: "Instrument 1 Readings" and "Instrument 2 Readings".</li>
+</ul>
+<img
+    class="demo"
+    src="images/08_DoubleGraph.gif"
+    alt="Combined graph"
+    height="415px"/>
+<ul>
+    <li>Distance-dependent graph. You can also combine various graph options depending on the distance. To do this, select the distance channel value from the "Distance" dropdown menu.</li>
+</ul>
+<img
+    class="demo"
+    src="images/09_DistGraphs.gif"
+    alt="Distance-dependent graph"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Histo">
+<div class="heading">
+Histograms
+</div>
+</header>
+<section>
+The Seaborn library is used to create histograms of normal distribution.
+Several options for displaying normal distribution are implemented in this program:
+<ul>
+    <li>Simple histogram overlaid with a normal distribution curve.
+        To plot, select the values of any one of the two columns: "Instrument 1 Readings" or "Instrument 2 Readings".</li>
+</ul>
+<img
+    class="demo"
+    src="images/10_Histo.gif"
+    alt="Simple histogram"
+    height="415px"/>
+<ul>
+    <li>Combined histograms. To compare readings, select values for two columns: "Instrument 1 Readings" and "Instrument 2 Readings".</li>
+</ul>
+<img
+    class="demo"
+    src="images/11_DoubleHisto.gif"
+    alt="Combined histograms"
+    height="415px"/>
+<ul>
+    <li>Distribution of values depending on the distance. You can also combine various display options depending on the distance. To do this, select the distance channel value from the "Distance" dropdown menu.</li>
+</ul>
+<img
+    class="demo"
+    src="images/12_DistortioanHisto.gif"
+    alt="Distribution of values"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Matplotlib">
+<div class="heading">
+Working with Matplotlib Window
+</div>
+</header>
+<section>
+The Matplotlib scientific graph window allows the user to perform various actions such as:
+<ul>
+    <li>Dragging the graph;</li>
+    <li>Scaling;</li>
+    <li>Displaying the plot area;</li>
+    <li>Changing axis labels;</li>
+    <li>Changing color;</li>
+    <li>Saving the graph in the selected format, etc.</li>
+</ul>
+<img
+    class="demo"
+    src="images/13_Matplotlib.gif"
+    alt="Working with Matplotlib window"
+    height="415px"/>
+
+</section>
+
+<header id="topic-3D">
+<div class="heading">
+3D Surface
+</div>
+</header>
+<section>
+The Plotly library is used to create 3D surfaces.
+To plot a surface, select all 3 columns: X, Y, and Z. !!!All coordinates must be in a rectangular system!!!
+<img
+    class="demo"
+    src="images/14_3D.gif"
+    alt="3D Surface"
+    height="415px"/>
+
+</section>
+
+<header id="topic-SurfaceWindow">
+<div class="heading">
+Working with 3D Surface Window
+</div>
+</header>
+<section>
+The 3D Surface window allows the user to perform various actions such as:
+<ul>
+    <li>Dragging;</li>
+    <li>Scaling;</li>
+    <li>Rotation;</li>
+    <li>Reading data;</li>
+    <li>Saving the image in the selected format, etc.</li>
+</ul>
+<img
+    class="demo"
+    src="images/15_Work3d.gif"
+    alt="Working with 3D Surface window"
+    height="415px"/>
+
+</section>
+
+<header id="topic-OasisMontaj">
+<div class="heading">
+Integration with OasisMontaj
+</div>
+</header>
+<section>
+This application allows working with any CSV file. However, as this program was created by order of AO "Yuzhmorgeologia",
+ let's discuss the process of exporting a database from OasisMontaj to a CSV file.
+The steps in the OasisMontaj environment are as follows:
+<ul>
+    <li>Database / Export / CSV etc...;</li>
+    <li>Select save parameters;</li>
+    <li>Click "Ok".</li>
+</ul>
+<img
+    class="demo"
+    src="images/16_OasisMontaj.gif"
+    alt="Export from OasisMontaj"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Autor">
+    <div class="heading">
+        Feedback
+    </div>
+</header>
+<section>
+    GraphPythonMag v 1.2.1<br>
+    Author: Dmitrii Miroshnik<br>
+    <ul>
+        <li>Application development</li>
+        <li>Web design</li>
+        <li>Processing geophysical data</li>
+    </ul>
+    For cooperation inquiries: dmitrii.miroshnik.92@gmail.com.<br>
+    You can also express gratitude to the Author.<br>
+    I will be glad to receive support and feedback!
+</section>
+
+
+<footer>
+Copyright &copy; 2024 Dmitrii Miroshnik
+</footer>
+
+</body>
+</html>

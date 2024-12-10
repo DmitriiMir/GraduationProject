@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>GraphPythonMag ヘルプ</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="title-header">
+<div id="title-text">
+    <img
+        id="title-image"
+        src="images/edgetech-logo.png"
+        alt="EdgeTech logo"/>
+    GraphPythonMag ヘルプ
+</div>
+</header>
+
+
+<ul>
+    <li><a href="#topic-About">アプリについて</a></li>
+    <li><a href="#topic-Interface">アプリのインターフェース</a></li>
+    <li><a href="#topic-Graphs">グラフ</a></li>
+    <li><a href="#topic-Histo">ヒストグラム</a></li>
+    <li><a href="#topic-Matplotlib">Matplotlib ウィンドウの操作</a></li>
+    <li><a href="#topic-3D">3D サーフェス</a></li>
+    <li><a href="#topic-SurfaceWindow">3D サーフェスウィンドウの操作</a></li>
+    <li><a href="#topic-OasisMontaj">OasisMontaj との統合</a></li>
+    <li><a href="#topic-Autor">フィードバック</a></li>
+</ul>
+
+
+<header id="topic-About">
+<div class="heading">
+アプリについて
+</div>
+</header>
+<section>
+これはさまざまな地球物理データを表示するアプリです。
+それはグラフ、ヒストグラム、および印刷品質の 3D サーフェスを生成する機能が実装されています。
+入力データは、拡張子が 'CSV' のファイルに保存された任意の数値データである可能性があります。
+</section>
+
+<header id="topic-Interface">
+<div class="heading">
+アプリのインターフェース
+</div>
+</header>
+<section>
+<ul>
+    <li>元の CSV ファイルを見つけて開くには、「開く」ボタンをクリックします。</li>
+</ul>
+<img
+    class="demo"
+    src="images/01_Open_File.gif"
+    alt="ファイルを開く"
+    height="415px"/>
+<ul>
+    <li>適切なデータを選択するには、ドロップダウンメニューを使用します。</li>
+</ul>
+<img
+    class="demo"
+    src="images/02_Combobox.gif"
+    alt="データの選択"
+    height="415px"/>
+<ul>
+    <li>データをクリアするには、「クリア」ボタンをクリックします。</li>
+</ul>
+<img
+    class="demo"
+    src="images/03_Clear.gif"
+    alt="データをクリア"
+    height="415px"/>
+<ul>
+    <li>グラフを生成するには、「表示」ボタンをクリックします。</li>
+</ul>
+<img
+    class="demo"
+    src="images/04_Show.gif"
+    alt="グラフを表示"
+    height="415px"/>
+<ul>
+    <li>インターフェースの言語を変更するには、「言語の選択」ドロップダウンメニューから利用可能な言語の1つを選択します。</li>
+</ul>
+<img
+    class="demo"
+    src="images/05_SwitchLanguage.gif"
+    alt="言語の選択"
+    height="415px"/>
+<ul>
+    <li>質問がある場合は、「ヘルプ」ボタンをクリックしてヘルプを求めることができます。</li>
+</ul>
+<img
+    class="demo"
+    src="images/06_ShowHelp.gif"
+    alt="ヘルプを表示"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Graphs">
+<div class="heading">
+グラフ
+</div>
+</header>
+<section>
+シンプルなグラフの生成には、科学グラフライブラリ Matplotlib を使用します。
+以下は、アプリで実装されているグラフの種類です：
+<ul>
+    <li>シンプルなグラフ。シンプルなグラフを生成するには、2つの列のいずれかの値を選択します："デバイス1の読み取り" または "デバイス2の読み取り"。</li>
+</ul>
+<img
+    class="demo"
+    src="images/07_EasyGraph.gif"
+    alt="シンプルなグラフ"
+    height="415px"/>
+<ul>
+    <li>組み合わせグラフ。2つのデバイスの読み取りを比較するには、2つの列の値を選択します："デバイス1の読み取り" と "デバイス2の読み取り"。</li>
+</ul>
+<img
+    class="demo"
+    src="images/08_DoubleGraph.gif"
+    alt="組み合わせグラフ"
+    height="415px"/>
+<ul>
+    <li>距離に関連するグラフ。距離に応じて異なるグラフの種類を組み合わせることもできます。これを実現するには、"距離" ドロップダウンメニューから距離チャンネルの値を選択します。</li>
+</ul>
+<img
+    class="demo"
+    src="images/09_DistGraphs.gif"
+    alt="距離に関連するグラフ"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Histo">
+<div class="heading">
+ヒストグラム
+</div>
+</header>
+<section>
+正規分布のヒストグラムを生成するには、Matplotlib の拡張機能である Seaborn ライブラリを使用します。
+以下は、アプリで実装されている正規分布の表示の種類です：
+<ul>
+    <li>シンプルなヒストグラム、正規分布のグラフと組み合わされています。生成するには、2つの列のいずれかの値を選択します："デバイス1の読み取り" または "デバイス2の読み取り"。</li>
+</ul>
+<img
+    class="demo"
+    src="images/10_Histo.gif"
+    alt="シンプルなヒストグラム"
+    height="415px"/>
+<ul>
+    <li>組み合わせヒストグラム。読み取りを比較するために、2つの列の値を選択します："デバイス1の読み取り" と "デバイス2の読み取り"。</li>
+</ul>
+<img
+    class="demo"
+    src="images/11_DoubleHisto.gif"
+    alt="組み合わせヒストグラム"
+    height="415px"/>
+<ul>
+    <li>距離に関連する値の分布。距離に応じて異なる表示の種類を組み合わせることもできます。これを実現するには、"距離" ドロップダウンメニューから距離チャンネルの値を選択します。</li>
+</ul>
+<img
+    class="demo"
+    src="images/12_DistortioanHisto.gif"
+    alt="距離に関連する値の分布"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Matplotlib">
+<div class="heading">
+Matplotlib ウィンドウの操作
+</div>
+</header>
+<section>
+科学グラフィックの表示ウィンドウである Matplotlib ウィンドウでは、次のような操作ができます：
+<ul>
+    <li>グラフのドラッグ;</li>
+    <li>スケーリング;</li>
+    <li>表示領域の移動;</li>
+    <li>軸ラベルの変更;</li>
+    <li>色の変更;</li>
+    <li>選択した形式でグラフを保存など。</li>
+</ul>
+<img
+    class="demo"
+    src="images/13_Matplotlib.gif"
+    alt="Matplotlib ウィンドウの操作"
+    height="415px"/>
+
+</section>
+
+<header id="topic-3D">
+<div class="heading">
+3D サーフェス
+</div>
+</header>
+<section>
+3D サーフェスを生成するには、Plotly ライブラリを使用します。
+サーフェスを生成するには、X、Y、および Z のすべての列を選択してください。 !!!すべての座標は直交座標系内にある必要があります!!!
+<img
+    class="demo"
+    src="images/14_3D.gif"
+    alt="3D サーフェス"
+    height="415px"/>
+
+</section>
+
+<header id="topic-SurfaceWindow">
+<div class="heading">
+3D サーフェスウィンドウの操作
+</div>
+</header>
+<section>
+3D サーフェス表示ウィンドウでは、次のような操作ができます：
+<ul>
+    <li>ドラッグ;</li>
+    <li>スケーリング;</li>
+    <li>回転;</li>
+    <li>データの読み取り;</li>
+    <li>選択した形式で画像を保存など。</li>
+</ul>
+<img
+    class="demo"
+    src="images/15_Work3d.gif"
+    alt="3D サーフェスウィンドウの操作"
+    height="415px"/>
+
+</section>
+
+<header id="topic-OasisMontaj">
+<div class="heading">
+OasisMontaj との統合
+</div>
+</header>
+<section>
+このアプリケーションは、任意の CSV ファイルで動作します。しかし、このプログラムは AO "Южморгеология" の要求に基づいて作成されたため、
+ OasisMontaj データベースを操作する方法を見ていきます。以下は、OasisMontaj 環境での CSV ファイルへのエクスポート手順です：
+<ul>
+    <li>Database / Export / CSV など...;</li>
+    <li>保存パラメーターを選択します;</li>
+    <li>「OK」をクリックします。</li>
+</ul>
+<img
+    class="demo"
+    src="images/16_OasisMontaj.gif"
+    alt="OasisMontaj からのエクスポート"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Autor">
+    <div class="heading">
+        フィードバック
+    </div>
+</header>
+<section>
+    GraphPythonMag v 1.2.1<br>
+    著者：ミロシュニク ドミトリー<br>
+    <ul>
+        <li>アプリケーション開発</li>
+        <li>ウェブデザイン</li>
+        <li>地球物理データ処理</li>
+    </ul>
+    協力のお問い合わせ先：dmitrii.miroshnik.92@gmail.com。<br>
+    また、著者に感謝することもできます。<br>
+    サポートとフィードバックを提供することを嬉しく思います！
+</section>
+
+
+<footer>
+Copyright &copy; 2024 Dmitrii Miroshnik
+</footer>
+
+</body>
+</html>

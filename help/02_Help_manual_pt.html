@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Manual em Português</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="title-header">
+<div id="title-text">
+    <img
+        id="title-image"
+        src="images/edgetech-logo.png"
+        alt="Logotipo da EdgeTech"/>
+    Ajuda GraphPythonMag
+</div>
+</header>
+
+
+<ul>
+    <li><a href="#topic-About">Sobre o Programa</a></li>
+    <li><a href="#topic-Interface">Interface do Programa</a></li>
+    <li><a href="#topic-Graphs">Gráficos</a></li>
+    <li><a href="#topic-Histo">Histogramas</a></li>
+    <li><a href="#topic-Matplotlib">Trabalhando com a Janela Matplotlib</a></li>
+    <li><a href="#topic-3D">Superfície 3D</a></li>
+    <li><a href="#topic-SurfaceWindow">Trabalhando com a Janela de Superfície 3D</a></li>
+    <li><a href="#topic-OasisMontaj">Integração com OasisMontaj</a></li>
+    <li><a href="#topic-Autor">Feedback</a></li>
+</ul>
+
+
+<header id="topic-About">
+<div class="heading">
+Sobre o Programa
+</div>
+</header>
+<section>
+Este aplicativo foi desenvolvido para exibir vários dados geofísicos.
+Ele permite criar gráficos, histogramas e superfícies 3D de alta qualidade.
+Qualquer dado numérico em formato tabular salvo em um arquivo CSV pode ser usado como entrada.
+</section>
+
+<header id="topic-Interface">
+<div class="heading">
+Interface do Programa
+</div>
+</header>
+<section>
+<ul>
+    <li>Clique no botão "Abrir" para encontrar e abrir o arquivo CSV de origem.</li>
+</ul>
+<img
+    class="demo"
+    src="images/01_Open_File.gif"
+    alt="Abrir arquivo"
+    height="415px"/>
+<ul>
+    <li>Use o menu suspenso para selecionar os dados relevantes.</li>
+</ul>
+<img
+    class="demo"
+    src="images/02_Combobox.gif"
+    alt="Selecionar dados"
+    height="415px"/>
+<ul>
+    <li>Para limpar os dados, clique no botão "Limpar".</li>
+</ul>
+<img
+    class="demo"
+    src="images/03_Clear.gif"
+    alt="Limpar dados"
+    height="415px"/>
+<ul>
+    <li>Para realizar plotagens gráficas, clique no botão "Mostrar".</li>
+</ul>
+<img
+    class="demo"
+    src="images/04_Show.gif"
+    alt="Mostrar gráficos"
+    height="415px"/>
+<ul>
+    <li>Para mudar o idioma da interface, selecione um dos idiomas disponíveis no menu suspenso "Seleção de Idioma".</li>
+</ul>
+<img
+    class="demo"
+    src="images/05_SwitchLanguage.gif"
+    alt="Seleção de idioma"
+    height="415px"/>
+<ul>
+    <li>Se tiver alguma dúvida, pode procurar ajuda clicando no botão "Ajuda".</li>
+</ul>
+<img
+    class="demo"
+    src="images/06_ShowHelp.gif"
+    alt="Mostrar ajuda"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Graphs">
+<div class="heading">
+Gráficos
+</div>
+</header>
+<section>
+Gráficos simples são criados usando a biblioteca científica Matplotlib.
+Os seguintes tipos de gráficos estão implementados neste programa:
+<ul>
+    <li>Gráfico simples. Para plotar um gráfico simples, selecione os valores de uma das duas colunas: "Leituras do Instrumento 1" ou "Leituras do Instrumento 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/07_EasyGraph.gif"
+    alt="Gráfico simples"
+    height="415px"/>
+<ul>
+    <li>Gráfico combinado. Para comparar as leituras de dois instrumentos, selecione os valores de duas colunas: "Leituras do Instrumento 1" e "Leituras do Instrumento 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/08_DoubleGraph.gif"
+    alt="Gráfico combinado"
+    height="415px"/>
+<ul>
+    <li>Gráfico dependente da distância. Você também pode combinar várias opções de gráfico dependendo da distância. Para isso, selecione o valor do canal de distância no menu suspenso "Distância".</li>
+</ul>
+<img
+    class="demo"
+    src="images/09_DistGraphs.gif"
+    alt="Gráfico dependente da distância"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Histo">
+<div class="heading">
+Histogramas
+</div>
+</header>
+<section>
+A biblioteca Seaborn é usada para criar histogramas de distribuição normal.
+Várias opções para exibir a distribuição normal estão implementadas neste programa:
+<ul>
+    <li>Histograma simples sobreposto com uma curva de distribuição normal.
+        Para plotar, selecione os valores de uma das duas colunas: "Leituras do Instrumento 1" ou "Leituras do Instrumento 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/10_Histo.gif"
+    alt="Histograma simples"
+    height="415px"/>
+<ul>
+    <li>Histogramas combinados. Para comparar leituras, selecione valores para duas colunas: "Leituras do Instrumento 1" e "Leituras do Instrumento 2".</li>
+</ul>
+<img
+    class="demo"
+    src="images/11_DoubleHisto.gif"
+    alt="Histogramas combinados"
+    height="415px"/>
+<ul>
+    <li>Distribuição de valores dependendo da distância. Você também pode combinar várias opções de exibição dependendo da distância. Para isso, selecione o valor do canal de distância no menu suspenso "Distância".</li>
+</ul>
+<img
+    class="demo"
+    src="images/12_DistortioanHisto.gif"
+    alt="Distribuição de valores"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Matplotlib">
+<div class="heading">
+Trabalhando com a Janela Matplotlib
+</div>
+</header>
+<section>
+A janela de gráficos científicos Matplotlib permite ao usuário realizar várias ações, como:
+<ul>
+    <li>Arrastar o gráfico;</li>
+    <li>Escalar;</li>
+    <li>Exibir a área de plotagem;</li>
+    <li>Alterar rótulos dos eixos;</li>
+    <li>Alterar cores;</li>
+    <li>Salvar o gráfico em formato selecionado, etc.</li>
+</ul>
+<img
+    class="demo"
+    src="images/13_Matplotlib.gif"
+    alt="Trabalhando com a Janela Matplotlib"
+    height="415px"/>
+
+</section>
+
+<header id="topic-3D">
+<div class="heading">
+Superfície 3D
+</div>
+</header>
+<section>
+A biblioteca Plotly é usada para criar superfícies 3D.
+Para criar uma superfície, selecione todas as 3 colunas: X, Y e Z. !!!Todas as coordenadas devem estar no sistema retangular!!!
+<img
+    class="demo"
+    src="images/14_3D.gif"
+    alt="Superfície 3D"
+    height="415px"/>
+
+</section>
+
+<header id="topic-SurfaceWindow">
+<div class="heading">
+Trabalhando com a Janela de Superfície 3D
+</div>
+</header>
+<section>
+A janela de exibição da Superfície 3D permite ao usuário realizar várias ações, como:
+<ul>
+    <li>Arrastar;</li>
+    <li>Escalar;</li>
+    <li>Girar;</li>
+    <li>Ler dados;</li>
+    <li>Salvar a imagem no formato selecionado, etc.</li>
+</ul>
+<img
+    class="demo"
+    src="images/15_Work3d.gif"
+    alt="Trabalhando com a Janela de Superfície 3D"
+    height="415px"/>
+
+</section>
+
+<header id="topic-OasisMontaj">
+<div class="heading">
+Integração com OasisMontaj
+</div>
+</header>
+<section>
+Este aplicativo permite trabalhar com qualquer arquivo CSV. No entanto, como este programa foi encomendado pela AO "Yuzhmorgeologia",
+ vamos discutir o processo de exportação de um banco de dados do OasisMontaj para um arquivo CSV.
+Os passos no ambiente OasisMontaj são os seguintes:
+<ul>
+    <li>Banco de dados / Exportar / CSV etc...;</li>
+    <li>Selecione os parâmetros de salvamento;</li>
+    <li>Clique em "Ok".</li>
+</ul>
+<img
+    class="demo"
+    src="images/16_OasisMontaj.gif"
+    alt="Exportar do OasisMontaj"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Autor">
+    <div class="heading">
+        Feedback
+    </div>
+</header>
+<section>
+    GraphPythonMag v 1.2.1<br>
+    Autor: Dmitrii Miroshnik<br>
+    <ul>
+        <li>Desenvolvimento de aplicativos</li>
+        <li>Design web</li>
+        <li>Processamento de dados geofísicos</li>
+    </ul>
+    Para consultas de cooperação: dmitrii.miroshnik.92@gmail.com.<br>
+    Você também pode agradecer ao Autor.<br>
+    Ficarei feliz com o apoio e feedback!
+</section>
+
+
+<footer>
+Copyright &copy; 2024 Dmitrii Miroshnik
+</footer>
+
+</body>
+</html>

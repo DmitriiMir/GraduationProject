@@ -1,0 +1,56 @@
+body {
+    background-color: white;
+}
+
+header {
+    background: linear-gradient(to right, black, #3050C0);
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+.heading {
+    padding: 5px;
+}
+
+#title-header {
+    background: linear-gradient(to right, black, #3050C0);
+    margin: 0px;
+}
+#title-text {
+    color: white;
+    font-size: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#title-image {
+    height: 50px;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    clear: both;
+    padding: 10px;
+}
+
+section {
+    font-family: serif;
+    font-size: 18px;
+    padding: 5px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+img.demo {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

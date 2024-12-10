@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Türkçe Kılavuz</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="title-header">
+<div id="title-text">
+    <img
+        id="title-image"
+        src="images/edgetech-logo.png"
+        alt="EdgeTech logosu"/>
+    GraphPythonMag Yardımı
+</div>
+</header>
+
+
+<ul>
+    <li><a href="#topic-About">Program Hakkında</a></li>
+    <li><a href="#topic-Interface">Program Arayüzü</a></li>
+    <li><a href="#topic-Graphs">Grafikler</a></li>
+    <li><a href="#topic-Histo">Histogramlar</a></li>
+    <li><a href="#topic-Matplotlib">Matplotlib Penceresi ile Çalışma</a></li>
+    <li><a href="#topic-3D">3D Yüzey</a></li>
+    <li><a href="#topic-SurfaceWindow">3D Yüzey Penceresi ile Çalışma</a></li>
+    <li><a href="#topic-OasisMontaj">OasisMontaj ile Entegrasyon</a></li>
+    <li><a href="#topic-Autor">Geri Bildirim</a></li>
+</ul>
+
+
+<header id="topic-About">
+<div class="heading">
+Program Hakkında
+</div>
+</header>
+<section>
+Bu, çeşitli jeofizik verileri görselleştirmek için bir uygulamadır.
+Basılı kalitede grafikler, histogramlar ve 3D yüzeyler oluşturma yeteneği içerir.
+Giriş verileri, 'CSV' uzantılı bir dosyada saklanan herhangi bir sayısal veri tablosu olabilir.
+</section>
+
+<header id="topic-Interface">
+<div class="heading">
+Program Arayüzü
+</div>
+</header>
+<section>
+<ul>
+    <li>CSV dosyasını bulmak ve açmak için "Aç" düğmesine tıklayın.</li>
+</ul>
+<img
+    class="demo"
+    src="images/01_Open_File.gif"
+    alt="Dosya Aç"
+    height="415px"/>
+<ul>
+    <li>İlgili verileri seçmek için açılır menüyü kullanın.</li>
+</ul>
+<img
+    class="demo"
+    src="images/02_Combobox.gif"
+    alt="Veri Seçimi"
+    height="415px"/>
+<ul>
+    <li>Verileri temizlemek için "Temizle" düğmesine tıklayın.</li>
+</ul>
+<img
+    class="demo"
+    src="images/03_Clear.gif"
+    alt="Veri Temizle"
+    height="415px"/>
+<ul>
+    <li>Grafiksel görselleştirmeleri yapmak için "Göster" düğmesine tıklayın.</li>
+</ul>
+<img
+    class="demo"
+    src="images/04_Show.gif"
+    alt="Grafikleri Göster"
+    height="415px"/>
+<ul>
+    <li>Arayüz dilini değiştirmek için "Dil Seçimi" açılır menüsünden bir dil seçin.</li>
+</ul>
+<img
+    class="demo"
+    src="images/05_SwitchLanguage.gif"
+    alt="Dil Seçimi"
+    height="415px"/>
+<ul>
+    <li>Sorularınız olduğunda, "Yardım" düğmesine tıklayarak yardım alabilirsiniz.</li>
+</ul>
+<img
+    class="demo"
+    src="images/06_ShowHelp.gif"
+    alt="Yardımı Göster"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Graphs">
+<div class="heading">
+Grafikler
+</div>
+</header>
+<section>
+Basit grafikler oluşturmak için Matplotlib bilimsel kütüphanesi kullanılır.
+Bu uygulamada şu grafik türleri uygulanmıştır:
+<ul>
+    <li>Basit grafik. Basit bir grafik oluşturmak için "Cihaz 1 Okumaları" veya "Cihaz 2 Okumaları" sütunlarının herhangi birinin değerlerini seçin.</li>
+</ul>
+<img
+    class="demo"
+    src="images/07_EasyGraph.gif"
+    alt="Basit Grafik"
+    height="415px"/>
+<ul>
+    <li>Kombine grafik. İki cihazın ölçümlerini karşılaştırmak için "Cihaz 1 Okumaları" ve "Cihaz 2 Okumaları" sütunlarının değerlerini seçin.</li>
+</ul>
+<img
+    class="demo"
+    src="images/08_DoubleGraph.gif"
+    alt="Kombine Grafik"
+    height="415px"/>
+<ul>
+    <li>Mesafeye bağlı grafik. Ayrıca mesafeye bağlı olarak farklı grafik seçeneklerini birleştirebilirsiniz. Bunun için "Mesafe" açılır menüsünden mesafe kanalı değerini seçin.</li>
+</ul>
+<img
+    class="demo"
+    src="images/09_DistGraphs.gif"
+    alt="Mesafeye Bağlı Grafik"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Histo">
+<div class="heading">
+Histogramlar
+</div>
+</header>
+<section>
+Normal dağılım histogramları oluşturmak için Matplotlib eklentisi olan Seaborn kütüphanesi kullanılır.
+Bu uygulamada normal dağılımın farklı gösterim seçenekleri şunlardır:
+<ul>
+    <li>Basit histogram, normal dağılım eğrisi ile birlikte. Oluşturmak için "Cihaz 1 Okumaları" veya "Cihaz 2 Okumaları" sütunlarının herhangi birinin değerlerini seçin.</li>
+</ul>
+<img
+    class="demo"
+    src="images/10_Histo.gif"
+    alt="Basit Histogram"
+    height="415px"/>
+<ul>
+    <li>Kombine histogramlar. Ölçümleri karşılaştırmak için "Cihaz 1 Okumaları" ve "Cihaz 2 Okumaları" sütunlarının değerlerini seçin.</li>
+</ul>
+<img
+    class="demo"
+    src="images/11_DoubleHisto.gif"
+    alt="Kombine Histogramlar"
+    height="415px"/>
+<ul>
+    <li>Mesafeye bağlı değer dağılımı. Ayrıca mesafeye bağlı olarak farklı gösterim seçeneklerini birleştirebilirsiniz. Bunun için "Mesafe" açılır menüsünden mesafe kanalı değerini seçin.</li>
+</ul>
+<img
+    class="demo"
+    src="images/12_DistortioanHisto.gif"
+    alt="Değer Dağılımı"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Matplotlib">
+<div class="heading">
+Matplotlib Penceresi ile Çalışma
+</div>
+</header>
+<section>
+Bilimsel grafik görüntüleme penceresi olan Matplotlib, kullanıcıya şu işlemleri yapma imkanı sağlar:
+<ul>
+    <li>Grafik sürükleme;</li>
+    <li>Ölçek değiştirme;</li>
+    <li>Görüntüleme alanı;</li>
+    <li>Eksen etiketlerini değiştirme;</li>
+    <li>Renk değiştirme;</li>
+    <li>Grafik belirtilen formatta kaydetme vb.</li>
+</ul>
+<img
+    class="demo"
+    src="images/13_Matplotlib.gif"
+    alt="Matplotlib Penceresi ile Çalışma"
+    height="415px"/>
+
+</section>
+
+<header id="topic-3D">
+<div class="heading">
+3D Yüzey
+</div>
+</header>
+<section>
+3D yüzey oluşturmak için Plotly kütüphanesi kullanılır.
+Yüzey oluşturmak için X, Y ve Z tüm sütunları seçin. !!!Tüm koordinatlar düzlemde olmalıdır!!!
+<img
+    class="demo"
+    src="images/14_3D.gif"
+    alt="3D Yüzey"
+    height="415px"/>
+
+</section>
+
+<header id="topic-SurfaceWindow">
+<div class="heading">
+3D Yüzey Penceresi ile Çalışma
+</div>
+</header>
+<section>
+3D Yüzey görüntüleme penceresi, kullanıcıya şu işlemleri yapma imkanı sağlar:
+<ul>
+    <li>Sürükleme;</li>
+    <li>Ölçek değiştirme;</li>
+    <li>Döndürme;</li>
+    <li>Veri okuma;</li>
+    <li>Görüntüyü belirtilen formatta kaydetme vb.</li>
+</ul>
+<img
+    class="demo"
+    src="images/15_Work3d.gif"
+    alt="3D Yüzey Penceresi ile Çalışma"
+    height="415px"/>
+
+</section>
+
+<header id="topic-OasisMontaj">
+<div class="heading">
+OasisMontaj ile Entegrasyon
+</div>
+</header>
+<section>
+Bu uygulama, herhangi bir CSV dosyası ile çalışmanıza izin verir. Ancak bu program AO "Yuzhmorgeologia" tarafından sipariş üzerine yapıldığı için OasisMontaj veritabanlarıyla çalışmak için bir CSV dosyasını dışa aktarma sürecini açıklayacağız.
+OasisMontaj ortamında adımlar şunlardır:
+<ul>
+    <li>Database / Export / CSV vb...;</li>
+    <li>Kaydetme parametrelerini seçin;</li>
+    <li>"Tamam" düğmesine tıklayın.</li>
+</ul>
+<img
+    class="demo"
+    src="images/16_OasisMontaj.gif"
+    alt="OasisMontaj'dan Dışa Aktarma"
+    height="415px"/>
+
+</section>
+
+<header id="topic-Autor">
+    <div class="heading">
+        Geri Bildirim
+    </div>
+</header>
+<section>
+    GraphPythonMag v 1.2.1<br>
+    Yazar: Dmitrii Miroshnik<br>
+    <ul>
+        <li>Uygulama Geliştirme</li>
+        <li>Web Tasarımı</li>
+        <li>Jeofizik Veri İşleme</li>
+    </ul>
+    İşbirliği için: dmitrii.miroshnik.92@gmail.com.<br>
+    Ayrıca Yazar'a teşekkür edebilirsiniz.<br>
+    Destek ve geri bildirimleriniz için memnuniyet duyarım!
+</section>
+
+
+<footer>
+Telif Hakkı &copy; 2024 Dmitrii Miroshnik
+</footer>
+
+</body>
+</html>
